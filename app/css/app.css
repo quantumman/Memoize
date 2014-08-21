@@ -1,0 +1,25 @@
+body {
+    padding-top: 70px;
+}
+
+.list-search {
+    margin-buttom: 3px;
+}
+
+.article-list {
+    padding-top: 10px;
+}
+
+.article-list li {
+    list-style-type: none;
+}
+
+.list-border {
+    margin-top: 3px;
+    margin-bottom: 7px;
+}
+
+.content-header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
