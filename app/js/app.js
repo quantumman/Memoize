@@ -8,7 +8,8 @@ memoizeApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider
       .when('/list', {
-        templateUrl: 'partials/list.html'
+        templateUrl: 'partials/list.html',
+        controller: 'ListController'
       })
       .when('/notes/edit', {
         templateUrl: 'partials/notes-edit.html'

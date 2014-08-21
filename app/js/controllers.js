@@ -9,3 +9,7 @@ memoizeControllers.controller('NavbarController', ['$scope', '$location',
       return $location.path() == viewLocation;
     };
   }]);
+
+memoizeControllers.controller('ListController', ['$scope',
+  function($scope) {
+  }]);
