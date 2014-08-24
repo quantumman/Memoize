@@ -21,10 +21,14 @@
         <div class="navbar-header">
           <a class="navbar-brand">Memoize</a>
         </div>
-        <div class="collapse navbar-collapse">
+        <div id='app-menu' class="collapse navbar-collapse" ng-controller="NavbarController">
           <ul class="nav navbar-nav navbar-left">
-            <li class="active"><a href="#">読む</a></li>
-            <li><a href="#">書く</a></li>
+            <li ng-class="{ active: isActive('/list') }">
+              <a href="#/list">新しい投稿</a>
+            </li>
+            <li ng-class="{ active: isActive('/notes/request') }">
+              <a href="#/notes/request">編集リクエスト</a>
+            </li>
           </ul>
           <form class="navbar-form input-group navbar-right navbar-input-group" role="search">
             <div class="form-group">
