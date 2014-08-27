@@ -1,3 +1,22 @@
+/* navbar */
+.tnav .navbar .container,
+.navbar-fixed-top {
+    min-height: 0.5px !important;
+}
+.navbar-nav > li > a
+{
+    padding-top: 14px !important;
+    padding-bottom: 12px !important;
+}
+.navbar-header {
+    height: 42px;
+}
+.navbar-form {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+
 body {
     padding-top: 70px;
 }
