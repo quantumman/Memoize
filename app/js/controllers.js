@@ -33,3 +33,7 @@ memoizeControllers.controller('ListController', ['$scope',
       }
     ];
   }]);
+
+memoizeControllers.controller('RequestController', [$scope,
+  function($scope) {
+  }]);
