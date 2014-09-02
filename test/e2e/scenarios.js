@@ -25,16 +25,16 @@ describe('Memoize', function() {
 
     var items = getActiveNavbarItems();
     expect(items.count()).toBe(1);
-    expect(items.get(0).getText()).toBe('読む');
+    expect(items.get(0).getText()).toBe('新しい投稿');
 
-    clickNavbarItem('書く');
+    clickNavbarItem('編集リクエスト');
     items = getActiveNavbarItems();
     expect(items.count()).toBe(1);
-    expect(items.get(0).getText()).toBe('書く');
+    expect(items.get(0).getText()).toBe('編集リクエスト');
 
-    clickNavbarItem('読む');
+    clickNavbarItem('新しい投稿');
     items = getActiveNavbarItems();
     expect(items.count()).toBe(1);
-    expect(items.get(0).getText()).toBe('読む');
+    expect(items.get(0).getText()).toBe('新しい投稿');
   });
 });
