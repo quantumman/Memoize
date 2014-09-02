@@ -4,6 +4,7 @@
 var memoizeApp = angular.module('memoizeApp', [
   'ngRoute',
   'memoizeControllers',
+  'memoizeServices',
   'ui.bootstrap'
 ]);
 
