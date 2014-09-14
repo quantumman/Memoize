@@ -1,5 +1,5 @@
 <ul class="note-list">
-  <li ng-repeat="note in notes | orderBy:'-createdDate'">
+  <li ng-repeat="note in notes | orderBy:'-createdOn'">
     <div class="media">
       <a href="#" class="pull-left">
         <img alt="User Image" class="img-thumbnail" ng-src="{{note.thumbnail}}">
@@ -8,7 +8,7 @@
         <div class="media-heading">
           <h3 class="content-header"><a href="#">{{note.title}}</a></h3>
         </div>
-        <strong>{{note.editor}}</strong> <small>posted on <em>{{note.createdDate | date:'yyyy/MM/dd HH:mm'}}</em></small>
+        <strong>{{note.editor}}</strong> <small>posted on <em>{{note.createdOn | date:'yyyy/MM/dd HH:mm'}}</em></small>
       </div>
     </div>
     <hr class="list-border"/>

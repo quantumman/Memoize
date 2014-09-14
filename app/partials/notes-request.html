@@ -1,5 +1,5 @@
 <ul class="media-list">
-  <li ng-repeat="note in notes | orderBy:'-createdDate'">
+  <li ng-repeat="note in notes | orderBy:'-createdOn'">
     <div class="media">
       <a href="#" class="pull-left">
         <img class="media-object img-thumbnail" ng-src="{{note.thumbnail}}" alt="User Image">
@@ -8,15 +8,15 @@
         <div class="media-heading">
           <h3 class="content-header"><a href="#">{{note.title}}</a></h3>
         </div>
-        <small>posted on <em>{{note.createdDate | date:'yyyy/MM/dd HH:mm'}}</em></small>
+        <small>posted on <em>{{note.createdOn | date:'yyyy/MM/dd HH:mm'}}</em></small>
 
-        <div class="media" ng-repeat="request in note.requests | orderBy:'-createdDate'">
+        <div class="media" ng-repeat="request in note.requests | orderBy:'-createdOn'">
           <a href="#" class="pull-left">
             <img class="media-object img-thumbnail" ng-src="{{request.thumbnail}}" alt="{{request.contributor}}">
           </a>
           <div class="media-body">
             <h4 class="content-header"><a href="#">{{request.comment}}</a></h4>
-            <strong>{{request.contributor}}</strong> <small>requested on <em>{{request.createdDate | date:'yyyy/MM/dd HH:mm'}}</em></small>
+            <strong>{{request.contributor}}</strong> <small>requested on <em>{{request.createdOn | date:'yyyy/MM/dd HH:mm'}}</em></small>
           </div>
         </div>
       </div>
