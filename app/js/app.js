@@ -1,3 +1,6 @@
+'use strict';
+
+/* App Module */
 var memoizeApp = angular.module('memoizeApp', [
   'ngRoute',
   'memoizeControllers',
