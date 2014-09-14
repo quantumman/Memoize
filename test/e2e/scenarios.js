@@ -37,4 +37,17 @@ describe('Memoize', function() {
     expect(items.count()).toBe(1);
     expect(items.get(0).getText()).toBe('新しい投稿');
   });
+
+  it('should show a list of new posts', function() {
+    clickNavbarItem('新しい投稿');
+
+    var titleColumn = element.all(by.repeater('note in notes').column('{{note.title}}'));
+    function getTitles () {
+      return titleColumn.map(function(elem) {
+        return elem.getText();
+      });
+    };
+
+    expect(getTitles()).toEqual(["TEST \"TITLE\" #3", "TEST \"TITLE\" #1", "TEST \"TITLE\" #2"]);
+  });
 });

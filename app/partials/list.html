@@ -6,7 +6,7 @@
       </a>
       <div class="media-body">
         <div class="media-heading">
-          <h3 class="content-header"><a href="#">{{note.title}}</a></h3>
+          <h3 class="content-header"><a ng-href="#/notes/{{note.id}}">{{note.title}}</a></h3>
         </div>
         <strong>{{note.editor}}</strong> <small>posted on <em>{{note.createdOn | date:'yyyy/MM/dd HH:mm'}}</em></small>
       </div>
