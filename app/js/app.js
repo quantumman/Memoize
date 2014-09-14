@@ -5,7 +5,8 @@ var memoizeApp = angular.module('memoizeApp', [
   'ngRoute',
   'memoizeControllers',
   'memoizeServices',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'hc.marked'
 ]);
 
 memoizeApp.config(['$routeProvider',
