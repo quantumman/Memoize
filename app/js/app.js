@@ -10,7 +10,7 @@ var memoizeApp = angular.module('memoizeApp', [
 memoizeApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider
-      .when('/list', {
+      .when('/notes', {
         templateUrl: 'partials/list.html',
         controller: 'ListController'
       })
@@ -22,6 +22,6 @@ memoizeApp.config(['$routeProvider',
         templateUrl: 'partials/notes-edit.html'
       })
       .otherwise({
-        redirectTo: '/list'
+        redirectTo: '/notes'
       });
   }]);
