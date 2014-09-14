@@ -19,6 +19,10 @@ memoizeApp.config(['$routeProvider',
         templateUrl: 'partials/notes-request.html',
         controller: 'RequestController'
       })
+      .when('/notes/:noteId', {
+        templateUrl: 'partials/note.html',
+        controller: 'NoteController'
+      })
       .when('/notes/edit', {
         templateUrl: 'partials/notes-edit.html'
       })
