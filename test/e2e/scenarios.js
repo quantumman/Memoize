@@ -23,16 +23,6 @@ describe('Memoize', function() {
       return element(by.id('app-menu')).all(by.css('.nav li.active'));
     };
 
-    var clickNavbarItem = function(itemLabel) {
-      element.all(by.css('.nav li')).filter(function(item) {
-        return item.getText().then(function(text) {
-          return text == itemLabel;
-        });
-      }).then(function(items) {
-        items[0].click();
-      });
-    };
-
     var items = getActiveNavbarItems();
     expect(items.count()).toBe(1);
     expect(items.get(0).getText()).toBe('新しい投稿');
