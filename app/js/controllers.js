@@ -3,8 +3,12 @@
 /* Controllers */
 var memoizeControllers = angular.module('memoizeControllers', []);
 
-memoizeControllers.controller('EditorController', ['$scope',
-  function($scope) {
+memoizeControllers.controller('EditorController', ['$scope', '$routeParams', 'Notes',
+  function($scope, $routeParams, Notes) {
+    $scope.rows = 30;
+    $scope.id = $routeParams.noteId;
+
+    $scope.note = Notes.get({noteId: $scope.id});
   }]);
 
 memoizeControllers.controller('NavbarController', ['$scope', '$location',

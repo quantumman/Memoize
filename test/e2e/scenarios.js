@@ -61,4 +61,21 @@ describe('Memoize', function() {
     expect(element(by.css('#markdown')).getText()).not.toBeNull();
     expect(element(by.css('#markdown')).getText()).toBeDefined();
   });
+
+  it('should edit a note', function() {
+    clickNavbarItem('新しい投稿');
+
+    element(by.repeater('note in notes').row(1))
+      .element(by.css('.content-header a'))
+      .click();
+
+    element(by.css('#edit-note')).click();
+
+    var textarea = element(by.model('note.content')).clear();
+    textarea.sendKeys('ABCD');
+    expect(textarea.getAttribute('value')).toBe('ABCD');
+
+    var preview = element(by.css('#markdown-preview'));
+    expect(preview.getText()).toBe('ABCD');
+  });
 });
