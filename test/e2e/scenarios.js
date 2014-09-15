@@ -50,4 +50,15 @@ describe('Memoize', function() {
 
     expect(getTitles()).toEqual(["TEST \"TITLE\" #3", "TEST \"TITLE\" #1", "TEST \"TITLE\" #2"]);
   });
+
+  it('should open a note', function() {
+    clickNavbarItem('新しい投稿');
+
+    element(by.repeater('note in notes').row(1))
+      .element(by.css('.content-header a'))
+      .click();
+
+    expect(element(by.css('#markdown')).getText()).not.toBeNull();
+    expect(element(by.css('#markdown')).getText()).toBeDefined();
+  });
 });
