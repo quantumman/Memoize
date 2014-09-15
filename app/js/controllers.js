@@ -12,7 +12,9 @@ memoizeControllers.controller('NavbarController', ['$scope', '$location',
 
 memoizeControllers.controller('NoteController', ['$scope', '$routeParams', 'Notes', 'marked',
   function($scope, $routeParams, Notes, marked) {
-    $scope.note = Notes.get({noteId: $routeParams.noteId});
+    $scope.id = $routeParams.noteId;
+
+    $scope.note = Notes.get({noteId: $scope.id});
   }]);
 
 memoizeControllers.controller('ListController', ['$scope', 'Notes',
