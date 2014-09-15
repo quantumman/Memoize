@@ -24,8 +24,9 @@ memoizeApp.config(['$routeProvider',
         templateUrl: 'partials/note.html',
         controller: 'NoteController'
       })
-      .when('/notes/edit', {
-        templateUrl: 'partials/notes-edit.html'
+      .when('/notes/edit/:noteId', {
+        templateUrl: 'partials/note-edit.html',
+        controller: 'EditorController'
       })
       .otherwise({
         redirectTo: '/notes'
