@@ -16,6 +16,10 @@ memoizeControllers.controller('NavbarController', ['$scope', '$location',
     $scope.isActive = function(viewLocation) {
       return $location.path() == viewLocation;
     };
+
+    $scope.isEditing = function() {
+      return $location.path().indexOf('/notes/edit/') === 0;
+    };
   }]);
 
 memoizeControllers.controller('NoteController', ['$scope', '$routeParams', 'Notes', 'marked',

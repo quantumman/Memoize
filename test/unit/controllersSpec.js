@@ -43,5 +43,22 @@ describe('Memoize controllers', function() {
       expect(scope.isActive('')).toBeFalsy();
       expect(scope.isActive('/')).toBeTruthy();
     });
+
+    it('should return true while editing note', function() {
+      $location.path('notes/edit/1');
+      expect(scope.isEditing()).toBeTruthy();
+
+      $location.path('notes/edit/2');
+      expect(scope.isEditing()).toBeTruthy();
+
+      $location.path('notes/1');
+      expect(scope.isEditing()).toBeFalsy();
+
+      $location.path('notes/edit/');
+      expect(scope.isEditing()).toBeTruthy();
+
+      $location.path('notes/edit');
+      expect(scope.isEditing()).toBeFalsy();
+    });
   });
 });
