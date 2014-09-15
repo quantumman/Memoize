@@ -8,6 +8,16 @@ describe('Memoize', function() {
     browser.get('app/index.html');
   });
 
+  var clickNavbarItem = function(itemLabel) {
+    element.all(by.css('.nav li')).filter(function(item) {
+      return item.getText().then(function(text) {
+        return text == itemLabel;
+      });
+    }).then(function(items) {
+      items[0].click();
+    });
+  };
+
   it('should highlight a current navbar item', function() {
     var getActiveNavbarItems = function() {
       return element(by.id('app-menu')).all(by.css('.nav li.active'));
