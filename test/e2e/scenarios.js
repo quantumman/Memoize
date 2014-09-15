@@ -76,5 +76,14 @@ describe('Memoize', function() {
       var preview = element(by.css('#markdown-preview'));
       expect(preview.getText()).toBe('ABCD');
     });
+
+    it('should provide Save button while editing a note', function() {
+      // Before open editor
+      expect(element(by.css('#contextual-action-button')).getText()).toBe('書く');
+
+      // Open editor
+      element(by.css('#edit-note')).click();
+      expect(element(by.css('#contextual-action-button')).getText()).toBe('保存');
+    });
   });
 });
