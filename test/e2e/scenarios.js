@@ -62,19 +62,11 @@ describe('Memoize', function() {
     });
 
     it('should open a note', function() {
-      element(by.repeater('note in notes').row(1))
-        .element(by.css('.content-header a'))
-        .click();
-
       expect(element(by.css('#markdown')).getText()).not.toBeNull();
       expect(element(by.css('#markdown')).getText()).toBeDefined();
     });
 
     it('should edit a note', function() {
-      element(by.repeater('note in notes').row(1))
-        .element(by.css('.content-header a'))
-        .click();
-
       element(by.css('#edit-note')).click();
 
       var textarea = element(by.model('note.content')).clear();
