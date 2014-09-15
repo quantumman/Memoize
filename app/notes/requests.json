@@ -1,6 +1,6 @@
 [
   {
-    "Thumbnail": "img/1.jpg",
+    "thumbnail": "img/1.jpg",
     "title": "TEST \"TITLE\" #1",
     "createdOn": "2014-08-26T10:10:10",
     "requests": [

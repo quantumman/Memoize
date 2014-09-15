@@ -5,7 +5,8 @@ var memoizeApp = angular.module('memoizeApp', [
   'ngRoute',
   'memoizeControllers',
   'memoizeServices',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'hc.marked'
 ]);
 
 memoizeApp.config(['$routeProvider',
@@ -19,8 +20,13 @@ memoizeApp.config(['$routeProvider',
         templateUrl: 'partials/notes-request.html',
         controller: 'RequestController'
       })
-      .when('/notes/edit', {
-        templateUrl: 'partials/notes-edit.html'
+      .when('/notes/:noteId', {
+        templateUrl: 'partials/note.html',
+        controller: 'NoteController'
+      })
+      .when('/notes/edit/:noteId', {
+        templateUrl: 'partials/note-edit.html',
+        controller: 'EditorController'
       })
       .otherwise({
         redirectTo: '/notes'

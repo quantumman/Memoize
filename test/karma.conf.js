@@ -10,6 +10,8 @@ module.exports = function(config){
       'app/bower_components/angular-animate/angular-animate.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
       'app/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+      'app/bower_components/marked/lib/marked.js',
+      'app/bower_components/angular-marked/angular-marked.js',
       'app/js/**/*.js',
       'test/unit/**/*.js'
     ],
