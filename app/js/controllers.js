@@ -3,6 +3,10 @@
 /* Controllers */
 var memoizeControllers = angular.module('memoizeControllers', []);
 
+memoizeControllers.controller('EditorController', ['$scope',
+  function($scope) {
+  }]);
+
 memoizeControllers.controller('NavbarController', ['$scope', '$location',
   function($scope, $location) {
     $scope.isActive = function(viewLocation) {
